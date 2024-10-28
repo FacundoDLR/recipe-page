@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.woff2") format("woff2"),
+    url("/assets/fonts/young-serif/YoungSerif-Regular.woff") format("woff"),
+    url("/assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/Outfit-Thin.woff2") format("woff2"),
+    url("/assets/fonts/outfit/Outfit-Thin.woff") format("woff"),
+    url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px para facilitar los cálculos */
+}
+
+:root {
+  /* VARIABLES DE FUENTE */
+  --font-family-title: "Young Serif", sans-serif;
+  --font-family-body: "Outfit", sans-serif;
+
+  /* TIPOGRAFÍA */
+  --font-size-heading: 4rem;
+  --font-size-subTitle: 2.8rem;
+  --font-size-blockquote: 2rem;
+  --font-size-body: 1.6rem;
+  --font-size-mobile: 3.6rem;
+
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-semiBold: 600;
+
+  --line-height: 1.5;
+  --letter-spacing-normal: 0px;
+
+  /* COLOR */
+  --White: hsl(0, 0%, 100%);
+
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%);
+  --Stone900: hsl(24, 5%, 18%);
+
+  --Brown800: hsl(14, 45%, 36%);
+
+  --Rose800: hsl(332, 51%, 32%);
+  --Rose50: hsl(330, 100%, 98%);
+
+  /* SPACING */
+  --spacing500: 4rem;
+  --spacing400: 3.2rem;
+  --spacing300: 2.4rem;
+  --spacing200: 1.6rem;
+  --spacing150: 1.2rem;
+  --spacing100: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+}
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
