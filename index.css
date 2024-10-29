@@ -10,10 +10,14 @@
 
 @font-face {
   font-family: "Outfit";
-  src: url("/assets/fonts/outfit/Outfit-Thin.woff2") format("woff2"),
-    url("/assets/fonts/outfit/Outfit-Thin.woff") format("woff"),
-    url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100;
+  src: url("/assets/fonts/outfit/Outfit-Thin.woff2") format("woff2-variations");
+  src: url("/assets/fonts/outfit/Outfit-Thin.woff2") format("woff2")
+    tech("variations");
+  src: url("/assets/fonts/outfit/Outfit-Thin.woff") format("woff-variations");
+  src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
   font-style: normal;
   font-display: swap;
 }
@@ -73,15 +77,141 @@ html {
   font-size: var(--font-size-body);
 }
 
+.m24 {
+  margin-bottom: var(--spacing300);
+}
 
+.separator {
+  border: 0.1rem solid var(--Stone150);
+}
 
+body {
+  min-width: 100dvw;
+}
 
+img {
+  width: 100%;
+  max-height: 17.1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing400);
+  margin: var(--spacing500) var(--spacing400);
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-mobile);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--Stone900);
+}
+
+.subtitle {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-subTitle);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--Brown800);
+}
+
+.textBody {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--Stone600);
+}
+
+.preparation {
+  background-color: var(--Rose50);
+  padding: var(--spacing300);
+  border-radius: var(--spacing150);
+}
+
+.preparation h3 {
+  color: var(--Rose800);
+  font-size: var(--font-size-blockquote);
+  font-weight: var(--font-weight-semiBold);
+  margin-bottom: var(--spacing200);
+}
+
+.preparation ul,
+.ingredients ul,
+.instructions ol {
+  padding-left: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing100);
+}
+.preparation li,
+.ingredients li,
+.instructions li {
+  padding-left: 1.6rem;
+}
+
+.preparation ul li::marker {
+  color: var(--Rose800);
+}
+
+.ingredients ul li::marker {
+  color: var(--Brown800);
+}
+
+.instructions ol li::marker,
+.nutrition tr td:nth-child(2) {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--Brown800);
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition table tr td:first-child {
+    padding-left: var(--spacing400);
+}
+.nutrition table tr td:last-child {
+    padding-right: var(--spacing400);
+}
+.nutrition tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    border-bottom: 0.1rem solid var(--Stone150);
+}
+.nutrition tbody tr:first-child{
+    padding-bottom: var(--spacing150);
+}
+.nutrition tbody tr:nth-child(2),
+.nutrition tbody tr:nth-child(3) {
+    padding: var(--spacing150) 0;
+}
+.nutrition tbody tr:last-child{
+    padding-top: var(--spacing150);
+    border-bottom: none;
+}
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+footer {
+    margin: 0 var(--spacing400) var(--spacing400);
+}
+
+.attribution span:first-child{
+    display: block;
+    margin-bottom: var(--spacing100);
+}
