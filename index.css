@@ -22,9 +22,82 @@
   font-display: swap;
 }
 
-html {
-  font-size: 62.5%; /* 1rem = 10px para facilitar los cálculos */
+/* ================ Modern CSS Reset by Andy Bell ================ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ================ CSS Variables ================ */
 
 :root {
   /* VARIABLES DE FUENTE */
@@ -32,11 +105,11 @@ html {
   --font-family-body: "Outfit", sans-serif;
 
   /* TIPOGRAFÍA */
-  --font-size-heading: 4rem;
-  --font-size-subTitle: 2.8rem;
-  --font-size-blockquote: 2rem;
-  --font-size-body: 1.6rem;
-  --font-size-mobile: 3.6rem;
+  --font-size-heading: 2.5rem;
+  --font-size-subTitle: 1.75rem;
+  --font-size-blockquote: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-mobile: 2.25rem;
 
   --font-weight-bold: 700;
   --font-weight-regular: 400;
@@ -59,20 +132,15 @@ html {
   --Rose50: hsl(330, 100%, 98%);
 
   /* SPACING */
-  --spacing500: 4rem;
-  --spacing400: 3.2rem;
-  --spacing300: 2.4rem;
-  --spacing200: 1.6rem;
-  --spacing150: 1.2rem;
-  --spacing100: 0.8rem;
+  --spacing500: 2.5rem;
+  --spacing400: 2rem;
+  --spacing300: 1.5rem;
+  --spacing200: 1rem;
+  --spacing150: 0.75rem;
+  --spacing100: 0.5rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
 }
@@ -86,13 +154,12 @@ html {
 }
 
 body {
-  min-width: 100dvw;
   background-color: var(--White);
 }
 
 img {
   width: 100%;
-  max-height: 17.1rem;
+  max-height: 10.6875rem;
 }
 
 main {
@@ -150,7 +217,7 @@ article{
 .preparation ul,
 .ingredients ul,
 .instructions ol {
-  padding-left: 2.6rem;
+  padding-left: 1.625rem;
   display: flex;
   flex-direction: column;
   gap: var(--spacing100);
@@ -158,7 +225,7 @@ article{
 .preparation li,
 .ingredients li,
 .instructions li {
-  padding-left: 1.6rem;
+  padding-left: 1rem;
 }
 
 .preparation ul li::marker {
@@ -189,8 +256,8 @@ article{
 .nutrition tbody tr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  border-bottom: 0.1rem solid var(--Stone150);
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--Stone150);
 }
 .nutrition tbody tr:first-child {
   padding-bottom: var(--spacing150);
@@ -204,16 +271,12 @@ article{
   border-bottom: none;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 .footer {
+    text-align: center;
   padding: 0 var(--spacing400) var(--spacing400);
   color: var(--Stone600);
   background-color: var(--White);
@@ -224,13 +287,13 @@ article{
   margin-bottom: var(--spacing100);
 }
 
-@media (480px <= width <= 768px) {
+@media (30rem <= width <= 48rem) {
     body{
         background-color: var(--Stone100);
     }
   main {
     padding: var(--spacing500);
-    margin: 12.8rem 4.8rem;
+    margin: 8rem 3rem;
     border-radius: var(--spacing300);
   }
   article {
@@ -246,7 +309,7 @@ article{
   }
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   body {
     background-color: var(--Stone100);
     display: flex;
@@ -254,9 +317,9 @@ article{
     align-items: center;
   }
   main {
-    max-width: 73.6rem;
+    max-width: 46rem;
     padding: var(--spacing500);
-    margin: 12.8rem 4.8rem;
+    margin: 8rem 3rem;
     border-radius: var(--spacing300);
   }
   article {
@@ -265,7 +328,7 @@ article{
 
   img {
     border-radius: var(--spacing200);
-    max-height: 30rem;
+    max-height: 18.75rem;
   }
   .footer {
     background-color: inherit;
