@@ -22,101 +22,98 @@
   <meta name="author" content="FACUNDO A. DE LOS RIOS">
   <meta name="description"
     content="Study page focused on writing semantic HTML. and appropriate for each content. Applying advanced CSS">
-    
+
   <link rel="stylesheet" href="index.css">
 
 </head>
 
-<body class="body">
+<body>
 
+  <main>
+    <img src="/assets/images/image-omelette.jpeg" width="375" height="auto" sizes="(min-width: 30rem) 41rem" alt="Picture of Ommelete recipe with cheese and vegetables">
 
-  <main class="mainCard">
-    <img src="/assets/images/image-omelette.jpeg" alt="Picture of Ommelete recipe with cheese and vegetables">
+    <section>
+      <!-- header -->
+      <h1 class="title">Simple Omelette Recipe</h1>
+      <p class="description textBody">An easy and quick dish, perfect for any meal. This classic omelette combines
+        beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      <!-- header -->
 
-    <article>
-      <header>
-        <h1 class="title m24">Simple Omelette Recipe</h1>
-
-        <p class="description textBody">An easy and quick dish, perfect for any meal. This classic omelette combines
-          beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
-      </header>
-
-      <section class="preparation">
-        <h3>Preparation time</h3>
+      <!-- preparation -->
+      <div class="preparation">
+        <h2>Preparation time</h2>
         <ul class="textBody">
           <li><strong>Preparation:</strong> 5 minutes</li>
           <li><strong>Cooking:</strong> 5 minutes</li>
           <li><strong>Total:</strong> Approximately 10 minutes</li>
         </ul>
-      </section>
+      </div>
+      <!-- preparation -->
 
-      <section class="ingredients">
-        <h2 class="subtitle m24">Ingredients</h2>
-
-        <ul class="textBody">
-          <li>2-3 large eggs</li>
-          <li>Salt, to taste</li>
-          <li>Pepper, to taste</li>
-          <li>1 tablespoon of butter or oil</li>
-          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
-        </ul>
-      </section>
-
-      <hr class="separator">
-
-      <section class="instructions">
-        <h2 class="subtitle m24">Instructions</h2>
-        <ol class="textBody">
-          <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are
-            well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
-          <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
-          <li>Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the
-            eggs evenly coat the surface.</li>
-          <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly
-            runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
-          <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it
-            over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
-          <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
-        </ol>
-      </section>
+      <!-- ingredients -->
+      <h2 class="subtitle">Ingredients</h2>
+      <ul class="textBody ingredients">
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+      <!-- ingredients -->
 
       <hr class="separator">
 
-      <section class="nutrition">
-        <h2 class="subtitle m24">Nutrition</h2>
+      <!-- instructions -->
+      <h2 class="subtitle">Instructions</h2>
+      <ol class="instructions textBody">
+        <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are
+          well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li>Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the
+          eggs evenly coat the surface.</li>
+        <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly
+          runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it
+          over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+      <!-- instructions -->
 
-        <p class="textBody m24">The table below shows nutritional values per serving without the additional fillings.
-        </p>
+      <hr class="separator">
 
-        <table class="textBody">
-          <tbody>
-            <tr>
-              <td>Calories</td>
-              <td>277kcal</td>
-            </tr>
-            <tr>
-              <td>Carbs</td>
-              <td>0g</td>
-            </tr>
-            <tr>
-              <td>Protein</td>
-              <td>20g</td>
-            </tr>
-            <tr>
-              <td>Fat</td>
-              <td>22g</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <!-- nutrition -->
+      <h2 class="subtitle">Nutrition</h2>
+      <p class="textBody">The table below shows nutritional values per serving without the additional fillings.
+      </p>
+      <table class="nutrition textBody">
+        <tbody>
+          <tr>
+            <th scope="row">Calories</th>
+            <td>277kcal</td>
+          </tr>
+          <tr>
+            <th scope="row">Carbs</th>
+            <td>0g</td>
+          </tr>
+          <tr>
+            <th scope="row">Protein</th>
+            <td>20g</td>
+          </tr>
+          <tr>
+            <th scope="row">Fat</th>
+            <td>22g</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- nutrition -->
 
-    </article>
+    </section>
 
   </main>
 
   <footer class="footer">
     <div class="attribution">
-      <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      <span>Challenge by <a href="https://www.frontendmentor.io/solutions/recipe-page-with-html-and-advanced-css-combinators-and-more-wzppZXVLTp" target="_blank">Frontend
           Mentor</a>.</span>
       <span>Coded by <a href="https://github.com/FacundoDLR" target="_blank">FACUNDO A. DE LOS RIOS</a>.</span>
     </div>

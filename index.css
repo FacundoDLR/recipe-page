@@ -1,3 +1,4 @@
+/* =========== FONTS =========== */
 @font-face {
   font-family: "Young Serif";
   src: url("/assets/fonts/young-serif/YoungSerif-Regular.woff2") format("woff2"),
@@ -22,83 +23,17 @@
   font-display: swap;
 }
 
-/* ================ Modern CSS Reset by Andy Bell ================ */
+/* ================ CSS Reset ================ */
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
+  margin: 0;
+  padding: 0;
 }
 
 /* ================ CSS Variables ================ */
-
 :root {
   /* VARIABLES DE FUENTE */
   --font-family-title: "Young Serif", sans-serif;
@@ -140,20 +75,10 @@ textarea:not([rows]) {
   --spacing100: 0.5rem;
 }
 
+/* =========== BODY CSS =========== */
 body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
-}
-
-.m24 {
-  margin-bottom: var(--spacing300);
-}
-
-.separator {
-  border: 0.1rem solid var(--Stone150);
-}
-
-body {
   background-color: var(--White);
 }
 
@@ -164,14 +89,17 @@ img {
 
 main {
   background-color: var(--White);
-
 }
 
-article{
-    margin: var(--spacing500)  var(--spacing400);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing400);
+section {
+  margin: var(--spacing500) var(--spacing400);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing400);
+}
+
+.separator {
+  border: 0.1rem solid var(--Stone150);
 }
 
 .title {
@@ -205,30 +133,28 @@ article{
   background-color: var(--Rose50);
   padding: var(--spacing300);
   border-radius: var(--spacing150);
+
+  & h2 {
+    color: var(--Rose800);
+    font-size: var(--font-size-blockquote);
+    font-weight: var(--font-weight-semiBold);
+    margin-bottom: var(--spacing200);
+  }
 }
 
-.preparation h3 {
-  color: var(--Rose800);
-  font-size: var(--font-size-blockquote);
-  font-weight: var(--font-weight-semiBold);
-  margin-bottom: var(--spacing200);
-}
-
-.preparation ul,
-.ingredients ul,
-.instructions ol {
+ul,
+ol {
   padding-left: 1.625rem;
   display: flex;
   flex-direction: column;
   gap: var(--spacing100);
-}
-.preparation li,
-.ingredients li,
-.instructions li {
-  padding-left: 1rem;
+
+  & li {
+    padding-left: 1rem;
+  }
 }
 
-.preparation ul li::marker {
+.preparation li::marker {
   color: var(--Rose800);
 }
 
@@ -236,50 +162,51 @@ article{
   color: var(--Brown800);
 }
 
-.instructions ol li::marker,
+.instructions li::marker,
 .nutrition tr td:nth-child(2) {
   font-family: var(--font-family-body);
   font-weight: var(--font-weight-bold);
   color: var(--Brown800);
 }
 
-.nutrition table {
+.nutrition {
   width: 100%;
   border-collapse: collapse;
 }
-.nutrition table tr td:first-child {
+.nutrition tr th {
   padding-left: var(--spacing400);
+  text-align: left;
 }
-.nutrition table tr td:last-child {
+.nutrition tr td {
   padding-right: var(--spacing400);
 }
-.nutrition tbody tr {
+.nutrition tr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
   border-bottom: 1px solid var(--Stone150);
 }
-.nutrition tbody tr:first-child {
+.nutrition tr:first-child {
   padding-bottom: var(--spacing150);
 }
-.nutrition tbody tr:nth-child(2),
-.nutrition tbody tr:nth-child(3) {
+.nutrition tr:nth-child(2),
+.nutrition tr:nth-child(3) {
   padding: var(--spacing150) 0;
 }
-.nutrition tbody tr:last-child {
+.nutrition tr:last-child {
   padding-top: var(--spacing150);
   border-bottom: none;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-.footer {
-    text-align: center;
-  padding: 0 var(--spacing400) var(--spacing400);
+/* =========== FOOTER CSS =========== */
+footer {
+  text-align: center;
   color: var(--Stone600);
   background-color: var(--White);
+  padding-bottom: 1rem;
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
 }
 
 .attribution span:first-child {
@@ -287,29 +214,8 @@ article{
   margin-bottom: var(--spacing100);
 }
 
-@media (30rem <= width <= 48rem) {
-    body{
-        background-color: var(--Stone100);
-    }
-  main {
-    padding: var(--spacing500);
-    margin: 8rem 3rem;
-    border-radius: var(--spacing300);
-  }
-  article {
-    margin: var(--spacing500) 0 0;
-  }
-
-  img {
-    border-radius: var(--spacing200);
-    max-height: 30rem;
-  }
-  .footer {
-    background-color: var(--Stone100);
-  }
-}
-
-@media (width >= 48rem) {
+/* =========== RESPONSIVE CSS =========== */
+@media (30rem <= width) {
   body {
     background-color: var(--Stone100);
     display: flex;
@@ -322,15 +228,14 @@ article{
     margin: 8rem 3rem;
     border-radius: var(--spacing300);
   }
-  article {
+  section {
     margin: var(--spacing500) 0 0;
   }
-
   img {
     border-radius: var(--spacing200);
     max-height: 18.75rem;
   }
-  .footer {
-    background-color: inherit;
+  footer {
+    background-color: var(--Stone100);
   }
 }
